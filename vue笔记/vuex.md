@@ -12,7 +12,7 @@
   > //1.安装插件
   > Vue.use(Vuex)
   > //2.创建对象
-  > const store=new Vuex.store({
+  > const store=new Vuex.Store({
   >     state:{
   >         
   >     },
@@ -139,6 +139,14 @@
   //$state.getters.xx(xx)
   //filter() 过滤器
   ```
+  
+- mapGetters辅助函数，将 store中的getter映射到局部计算属性中。
+
+  > ...mapGetters([
+  >
+  > ​	'xxx','xx'
+  >
+  > ])
 
 #### 四.actions的基本使用
 

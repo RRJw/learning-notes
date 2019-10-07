@@ -15,6 +15,7 @@ box-sizing：border-box 将div的设置的宽度平均分配给盒子除了外�
 3. 绝对布局 postion:absolute top right bottom left
 4. 相对布局 postion:relative
 5. 固定布局 postion:fixed
+6. postion:sticky 这个属性配合top使用可实现磁吸效果，让设置这个属性的元素在距离top的距离之内使其变成postion:fixed;
 
 #### 多列布局
 
@@ -58,5 +59,60 @@ display：flex；
 
  **align-items:center** 设置在垂直方向(侧轴方向)的对齐方式
 
+#### grid布局
 
+- 基本使用:
+
+  ```html
+  <div class='container'>
+      
+  </div>
+  <style>justify-self属性设置单元格内容的水平位置（左中右），跟justify-items属性的用法完全一致，但只作用于单个项目。
+  
+  align-self属性设置单元格内容的垂直位置（上中下），跟align-items属性的用法完全一致，也是只作用于单个项目。
+      .container{
+          display:grid;//设置容器为grid布局
+          grid-template-colums:repeat(3,100px);//设置内容为3列，列宽为100px
+          grid-template-rows：repeat(3,100px);//设置内容为3行，行高为100px; repeat()第一个参数为重复的次数，第二个参数是为所重复的值
+          //第二个参数可以为一种模式：定义6列 repeat(2,100px 20px 30px) 意思为有列宽分别为100px，20px，30px的列2份，顺序排列
+      }
+  </style>
+  ```
+
+- auto-fill:为自动填充，当父容器高度不确定或没有设置时，子元素设置的内容自动填充满，直到不能放置更多的列或宽
+
+- fr:表示元素所占的比例大小，例如1fr 2fr 表示1fr的宽或高为2fr的一半
+
+- `row-gap`属性设置行与行的间隔（行间距），`column-gap`属性设置列与列的间隔（列间距）
+
+  > 合并简写:gap:行，列
+
+- grid-auto-flow:子元素放置的顺序，默认的放置顺序是"先行后列"
+
+- `justify-items`属性设置单元格内容的水平位置（左中右），`align-items`属性设置单元格内容的垂直位置（上中下）。**子元素**‘/项目
+
+  > 简写:place-items：align,justify
+
+- `justify-content`属性是整个内容区域在容器里面的水平位置（左中右），`align-content`属性是整个内容区域的垂直位置（上中下）。**父元素**/容器
+
+- ```css
+  grid-auto-rows 设置新增的行或列的高度
+  例如:grid-row-start:4 ,让开始在4行出现的子元素，系统生成的空白元素高度为设置的高度
+  ```
+
+- grid-xx-start/end :**指定项目的四个边框，分别定位在哪根网格线**\
+
+-  grid-template-areas：设置网格的布局模型
+
+  > 例如: grid-template-areas: 'a b c'
+  >                      						  'd e f'
+  >                                                'g h i';
+
+- `grid-area`属性指定项目放在哪一个区域。
+
+- `justify-self`属性设置单元格内容的水平位置（左中右），跟`justify-items`属性的用法完全一致，但只作用于单个项目。
+
+  `align-self`属性设置单元格内容的垂直位置（上中下），跟`align-items`属性的用法完全一致，也是只作用于单个项目。 **项目的内容**
+
+#### vertical-align: middle只对行内元素有效
 
