@@ -1,0 +1,31 @@
+- 多个事件处理on
+
+  ```js
+  $("元素").on({
+      mouseenter:function() {},
+      click: function() {}
+  })
+  处理同一个函数
+  $("元素").on("mouseenter mouseleave", function() { toggleClass()})
+  ```
+
+- 事件委派:可以把原来加给子元素身上的事件绑定到父元素身上，就是把元素委派给父元素
+
+  ```js
+  $("ul").on("click","li",function() {})
+  ```
+
+- 事件解绑: off()
+
+- 自动触发事件: trigger("事件")  triggerHandler() 不执行默认事件
+
+- $.extend("目标对象","拷贝对象")
+
+  ```js
+  //1，浅拷贝把对象中复杂数据类型的地址拷贝给了目标对象，存在相同属性会覆盖
+  //2，深拷贝吧数据完全复制一份给目标对象，如果里面有不冲突对象会合并
+  $.extend(true,"目标对象","拷贝对象")深拷贝
+  ```
+
+  
+

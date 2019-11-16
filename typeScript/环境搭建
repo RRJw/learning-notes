@@ -1,0 +1,70 @@
+- 全局安装typescript
+
+  > npm install typescript -g
+
+##### webpack环境配置搭建
+
+- 创建基础目录结构
+
+  > |--index.html  //跑在浏览器上的模块文件
+  >
+  > |--build 
+  >
+  > | 		  webpack.config.js
+  >
+  > |--src
+  >
+  > ​			 main.ts
+
+- 使用npm init -y 来初始化package.json文件
+
+- 项目本地依赖typescript安装
+
+  > npm install typescript --save
+
+- 初始化tsconfig.json文件
+
+  > tsc --init
+
+- 建议安装ts-lint来严格限制typescript代码编写风格
+
+  > npm install tslint -g
+
+- 并在项目中初始化tslint的配置文件
+
+  > tslint -i
+
+- webpack相关配置
+
+  > npm install webpack webpack-cli webpack-dev-server -D
+
+- 在package.json中添加启动命令
+
+  ```js
+  "serve": "cross-env NODE_ENV=development webpack-dev-server --mode=development --config build/webpack.config.js"
+  ```
+
+- 添加webpack的其他相关依赖
+
+  - 依赖一: cross-env,这个插件的作用是可以在webpack.config.js中通过 process.env.NODE_ENV 来获取当前是开发还是生产环境
+
+    ```javascript
+    npm install cross-env -D
+    ```
+
+  - 依赖二:ts-loader,因为我们需要解析.ts文件，所以需要依赖对应的loader：ts-loader
+
+    ```js
+    npm install ts-loader -D
+    ```
+
+  - 依赖三：html-webpack-plugin,编译后的代码需要对应的html模块作为它的运行环境，所以我们需要使用html-webpack-plugin来将它插入到对应的模板中
+
+    ```js
+    npm install html-webpack-plugin -D
+    ```
+
+    
+
+  
+

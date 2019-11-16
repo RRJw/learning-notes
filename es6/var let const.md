@@ -105,6 +105,8 @@ const person = {
   >             return map + item
   >         })
   > ```
+  
+- Array.from() 将类数组转换成数组
 
 **2. String**
 
@@ -243,3 +245,8 @@ const person = {
             c
 ```
 
+##### 字符串
+
+- xx.statrsWith('111'),判断某个 字符串是否是以111开头的。
+- endsWith() 同理
+- function.bind() 可用于绑定作用域 this指向问题解决

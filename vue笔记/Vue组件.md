@@ -86,7 +86,9 @@ render会把整个页面替换渲染
    >
    > $children来获取子组件，返回的是一个数组
 
+#### 父级向子级传递数据
 
+- provide(){ return {}} 与inject注入，建议在高阶组件中使用
 
 #### 在webpack中使用vue；
 
