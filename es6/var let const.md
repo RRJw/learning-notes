@@ -68,7 +68,7 @@ const person = {
 
 **1.Array**
 
-- map 一对一映射元素对元素进行操作
+- map 一对一映射元素对元素进行操作(不会改变数组元素类型为值类型的元素，但是会改变引用数据类型的元素)
 
 > ```
 > let arr = [99, 22, 97, 85, 50, 20, 99, 21]
@@ -153,6 +153,14 @@ const person = {
 
 - async/await
 
+  ```js
+  async函数内部存在异步操作，await作为内部异步函数运行成功后的then方法。
+  await后的异步函数如果返回了reject，将不再执行后续代码
+  async函数返回一个promise，通过.then可以获取函数中的返回值return，当async函数出现return语句及表示这个reslove，当抛出异常则reject
+  ```
+  
+  
+  
   > async function xx(){}
   
   ```javascript

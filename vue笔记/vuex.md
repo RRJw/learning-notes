@@ -28,7 +28,7 @@
   >         
   >     }
   > })
-  >  exports.default=store
+  >  export default store
   > ```
 
 - 在入口文件中导入index.js文件,并在vue实例中注册store对象

@@ -1,0 +1,2 @@
+- border-spacing :相邻边框之间的距离(通常与 border-collapse:separate;一起使用)
+- border-collapse是否合并边框

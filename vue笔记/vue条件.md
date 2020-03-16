@@ -17,3 +17,15 @@
 
 #### v-on:input 实时监听表单时输入 $event.target.value
 
+#### .sync修饰符，用来在子组件中需要修改父组件传入的值，父组件也同时显示更新这个值的状态。
+
+```js
+//具体写法
+//父组件传值，并使用.sync修饰需要动态修改的值
+<parents :value.sync="value"></parents>
+//子组件
+props:{'value'}
+this.$emit('update:value',newValue)
+
+```
+

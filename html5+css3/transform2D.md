@@ -15,15 +15,26 @@ tuansform：origin 旋转的轴心  可设置x，y或者特殊关键字top，lef
 
 transform移动是参照元素本身的宽高来实现的。
 
+transition复合写法会根据后写的属性先执行。
+
+```js
+transition: rotate(30deg) translate() //先执行移动，再旋转
+//位移会受到 旋转，斜切等其他元素影响
+```
+
+
+
 #### transform3d与2d同
 
 transform3d:rotate(x,y,z,deg)
 
 **transform-style:flat不保留3d位置|preserve-3d 保留3d变换后的位置**  （**需要设置在父元素中**）
 
-perspectice：景深
+perspectice：景深父元素设置
 
 perspectice-origin：景深视角
+
+backface-visibility: hidden; 设置旋转元素后将元素隐藏。
 
 
 

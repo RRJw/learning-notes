@@ -4,7 +4,7 @@
 
 内联块元素 能设置宽高，前后没有换行符
 
-box-sizing：border-box 将div的设置的宽度平均分配给盒子除了外边距
+box-sizing：border-box 将div的设置的宽度平均分配给盒子除了外边距 //可以解决边距问题
 
 两个盒子相邻会出现外边距重叠，谁的外边距大用谁
 
@@ -16,6 +16,7 @@ box-sizing：border-box 将div的设置的宽度平均分配给盒子除了外�
 4. 相对布局 postion:relative
 5. 固定布局 postion:fixed
 6. postion:sticky 这个属性配合top使用可实现磁吸效果，让设置这个属性的元素在距离top的距离之内使其变成postion:fixed;
+7. z-index 注意：在存在嵌套层级与兄弟比较时会忽略嵌套内的层级关系
 
 #### 多列布局
 
